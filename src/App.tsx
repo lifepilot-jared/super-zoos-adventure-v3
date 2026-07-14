@@ -1,5 +1,5 @@
-import { V31Game } from "./game/V31Game";
+import { V32Game } from "./game/V32Game";
 
 export default function App() {
-  return <V31Game />;
+  return <V32Game />;
 }
