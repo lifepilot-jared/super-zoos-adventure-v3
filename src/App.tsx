@@ -1,5 +1,5 @@
-import { V36EngineTestStable } from "./game/v36/V36EngineTestStable";
+import { V36ReadableRouteTest } from "./game/v36/V36ReadableRouteTest";
 
 export default function App() {
-  return <V36EngineTestStable />;
+  return <V36ReadableRouteTest />;
 }
