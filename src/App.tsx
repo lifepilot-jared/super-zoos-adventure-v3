@@ -1,5 +1,5 @@
-import { V36EngineTest } from "./game/v36/V36EngineTest";
+import { V36EngineTestStable } from "./game/v36/V36EngineTestStable";
 
 export default function App() {
-  return <V36EngineTest />;
+  return <V36EngineTestStable />;
 }
