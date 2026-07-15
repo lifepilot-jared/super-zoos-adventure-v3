@@ -1,5 +1,5 @@
-import { V36ReadableRouteTest } from "./game/v36/V36ReadableRouteTest";
+import { V36ClarityRouteTest } from "./game/v36/V36ClarityRouteTest";
 
 export default function App() {
-  return <V36ReadableRouteTest />;
+  return <V36ClarityRouteTest />;
 }
