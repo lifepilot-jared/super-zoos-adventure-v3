@@ -1,0 +1,34 @@
+name: Check V3.6 Engine Branch
+
+on:
+  push:
+    branches:
+      - feature/v3.6-engine
+  pull_request:
+    branches:
+      - develop
+
+permissions:
+  contents: read
+
+concurrency:
+  group: v36-engine-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Verify V3.6 engine compiles
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: Type-check and build
+        run: npm run build
+      - name: Verify output
+        run: test -f dist/index.html
